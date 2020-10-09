@@ -1,13 +1,11 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 
 setup(
-    name='mytool',
-    packages=find_packages(),
+    name='subtool',
+    packages=['subtool'],
     author='Alex Rosengarten',
     author_email='alxrsngrtn@google.com',
     url='https://github.com/alxrsngrtn/beam-cli-example',
     description='A toy python project to demo packaging a dataflow pipeline in a CLI.',
-    install_requirements=['apache-beam[gcp]'],
-    scripts=['mytool/boom']
 )

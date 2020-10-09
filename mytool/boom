@@ -1,0 +1,6 @@
+#!/usr/bin/env python3
+
+from mytool.subtool import cli
+
+if __name__ == '__main__':
+    cli(['--setup_file', './setup.py'])
