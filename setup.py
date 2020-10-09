@@ -10,9 +10,4 @@ setup(
     description='A toy python project to demo packaging a dataflow pipeline in a CLI.',
     install_requirements=['apache-beam[gcp]'],
     scripts=['boom']
-    # entry_points={
-    #     'console_scripts': [
-    #         'boom=script:cli',
-    #     ]
-    # },
 )
