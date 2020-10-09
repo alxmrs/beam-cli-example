@@ -9,9 +9,10 @@ setup(
     url='https://github.com/alxrsngrtn/beam-cli-example',
     description='A toy python project to demo packaging a dataflow pipeline in a CLI.',
     install_requirements=['apache-beam[gcp]'],
-    entry_points={
-        'console_scripts': [
-            'boom=mytool:cli',
-        ]
-    },
+    scripts=['boom']
+    # entry_points={
+    #     'console_scripts': [
+    #         'boom=script:cli',
+    #     ]
+    # },
 )
