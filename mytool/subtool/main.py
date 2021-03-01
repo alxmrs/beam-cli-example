@@ -22,4 +22,5 @@ def run(argv: t.List[str]):
             p
             | 'Create' >> beam.Create(list(itertools.product(known_args.keyword, repeat=2)))
             | 'Process' >> beam.MapTuple(pass_through)
+            | 'Print' >> beam.Map(print)
         )
