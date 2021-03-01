@@ -3,8 +3,7 @@
 ## Installation
 
 ```shell script
-git clone git@github.com:alxrsngrtn/beam-cli-example.git
-pip install .
+pip install git+https://github.com/alxrsngrtn/beam-cli-example.git#egg=mytool
 ```
 
 ## Usage
