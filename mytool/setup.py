@@ -1,9 +1,9 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 
 setup(
     name='subtool',
-    packages=['subtool'],
+    packages=find_packages(),
     author='Alex Merose',
     author_email='alxr@google.com',
     url='https://github.com/alxmrs/beam-cli-example',
