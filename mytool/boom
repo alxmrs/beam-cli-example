@@ -4,6 +4,7 @@ import tempfile
 import glob
 import os
 import sys
+import mytool
 from mytool.subtool import cli
 from apache_beam.utils import processes
 
@@ -15,8 +16,9 @@ if __name__ == '__main__':
     logging.getLogger().setLevel(logging.INFO)
 
     with tempfile.TemporaryDirectory() as tmpdir:
+        site_pkg = mytool.__path__[0]
         processes.check_output(
-            f'{sys.executable} ./setup.py sdist --dist-dir {tmpdir}'.split(),
+            f'{sys.executable} {site_pkg}/setup.py sdist --dist-dir {tmpdir}'.split(),
             stderr=processes.STDOUT
         )
 
