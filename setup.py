@@ -8,6 +8,6 @@ setup(
     author_email='alxr@google.com',
     url='https://github.com/alxmrs/beam-cli-example',
     description='A toy python project to demo packaging a dataflow pipeline in a CLI.',
-    install_requirements=['apache-beam[gcp]'],
+    install_requires=['apache-beam[gcp]'],
     scripts=['mytool/boom']
 )
