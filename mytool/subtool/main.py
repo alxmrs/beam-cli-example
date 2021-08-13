@@ -20,7 +20,8 @@ def run(argv: t.List[str]):
     with beam.Pipeline(options=pipeline_opts) as p:
         (
             p
-            | 'Create' >> beam.Create(list(itertools.product(known_args.keyword, repeat=2)))
+            | 'Create' >> beam.Create([known_args.keyword])
+            | 'Expand' >> beam.FlatMap(lambda kw: itertools.product(kw, repeat=2))
             | 'Process' >> beam.MapTuple(pass_through)
-            | 'Print' >> beam.Map(print)
+            | 'Print' >> beam.MapTuple(print)
         )
